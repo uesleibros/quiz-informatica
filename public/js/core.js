@@ -25,7 +25,9 @@
   });
 
   function loadQuestion() {
-    const question = quizData[currentQuestion];
+    const questions [...quizData);
+    shuffle(questions);
+    const question = questions[currentQuestion];
     questionEl.textContent = question.question;
     answersEl.innerHTML = '';
     explanationEl.classList.add("hidden");
@@ -86,7 +88,7 @@
     explanationTextEl.textContent = quizData[currentQuestion].explanation;
     explanationEl.classList.remove("hidden");
     if (currentQuestion + 1 > quizData.length)
-      nextQuestionBtn.textContent = "Ir para resultados";
+      nextQuestionBtn.innerText = "Ir para resultados";
     nextQuestionBtn.classList.remove("hidden");
   }
 
@@ -115,7 +117,7 @@
     currentQuestion = 0;
     score = 0;
     resultEl.classList.add("hidden");
-    nextQuestionBtn.textContent = "Próxima Pergunta";
+    nextQuestionBtn.innerText = "Próxima Pergunta";
     document.getElementById("intro").classList.remove("hidden");
   });
 })();
