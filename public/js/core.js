@@ -27,7 +27,7 @@
   });
 
   function loadQuestion() {
-    const questions [...quizData];
+    const questions = [...quizData];
     shuffle(questions);
     const question = questions[currentQuestion];
     questionEl.textContent = question.question;
