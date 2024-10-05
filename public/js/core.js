@@ -35,6 +35,8 @@
   let score = 0;
 
   let correctAnswerIndex;
+  const questions = [...quizData];
+  shuffle(questions);
   const startQuiz = document.getElementById("startQuiz");
   const quizContainer = document.getElementById("quizContainer");
   const questionEl = document.getElementById("question");
@@ -55,8 +57,6 @@
   });
 
   function loadQuestion() {
-    const questions = [...quizData];
-    shuffle(questions);
     const question = questions[currentQuestion];
     questionEl.textContent = question.question;
     answersEl.innerHTML = '';
