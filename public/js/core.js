@@ -85,6 +85,8 @@
 
     explanationTextEl.textContent = quizData[currentQuestion].explanation;
     explanationEl.classList.remove("hidden");
+    if (currentQuestion + 1 > quizData.length)
+      nextQuestionBtn.textContent = "Ir para resultados";
     nextQuestionBtn.classList.remove("hidden");
   }
 
@@ -113,6 +115,7 @@
     currentQuestion = 0;
     score = 0;
     resultEl.classList.add("hidden");
+    nextQuestionBtn.textContent = "Próxima Pergunta";
     document.getElementById("intro").classList.remove("hidden");
   });
 })();
