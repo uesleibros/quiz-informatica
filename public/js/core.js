@@ -115,16 +115,16 @@
       errorSound.play();
     }
 
-    explanationTextEl.textContent = quizData[currentQuestion].explanation;
+    explanationTextEl.textContent = questions[currentQuestion].explanation;
     explanationEl.classList.remove("hidden");
-    if (currentQuestion + 1 > quizData.length)
+    if (currentQuestion + 1 > questions.length)
       nextQuestionBtn.innerText = "Ir para resultados";
     nextQuestionBtn.classList.remove("hidden");
   }
 
   nextQuestionBtn.addEventListener("click", () => {
     currentQuestion++;
-    if (currentQuestion < quizData.length) {
+    if (currentQuestion < questions.length) {
       loadQuestion();
     } else {
       showResult();
