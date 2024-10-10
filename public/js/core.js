@@ -753,7 +753,7 @@
     });
 
     nextQuestionBtn.classList.add("hidden");
-    giveUpQuizBtn.classList.add("show");
+    giveUpQuizBtn.classList.remove("hidden");
     startTimer();
   }
 
@@ -805,7 +805,7 @@
     explanationTextEl.textContent = currentQ.explanation;
     explanationEl.classList.remove("hidden");
     nextQuestionBtn.classList.remove("hidden");
-    giveUpQuizBtn.classList.remove("show");
+    giveUpQuizBtn.classList.add("hidden");
 
     if (currentQuestion === questions.length - 1) {
       nextQuestionBtn.innerText = "Ver Resultados";
@@ -839,7 +839,7 @@
     explanationTextEl.textContent = currentQ.explanation;
     explanationEl.classList.remove("hidden");
     nextQuestionBtn.classList.remove("hidden");
-    giveUpQuizBtn.classList.remove("show");
+    giveUpQuizBtn.classList.add("hidden");
 
     if (currentQuestion === questions.length - 1) {
       nextQuestionBtn.innerText = "Ver Resultados";
